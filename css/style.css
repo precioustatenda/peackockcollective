@@ -1,0 +1,310 @@
+* {
+  background: #000;
+  color: #fff;
+  font-family: panchangRegular;
+}
+
+img {
+  width: 30%;
+}
+
+@font-face {
+  font-family: panchangBold;
+  src: url(./Panchang_Complete/Fonts/OTF/Panchang-Bold.otf);
+}
+@font-face {
+  font-family: panchangRegular;
+  src: url(./Panchang_Complete/Fonts/OTF/Panchang-Regular.otf);
+}
+header {
+  width: 100%;
+}
+header div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header div img {
+  width: 20%;
+}
+header div .join-text {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+header div .join-text span {
+  background: #000;
+  z-index: 1;
+}
+header div .join-text img {
+  z-index: 0;
+  margin-left: -7%;
+}
+
+@media (min-width: 768px) {
+  header div img {
+    width: 10%;
+  }
+  header div .join-text img {
+    margin-left: -7%;
+  }
+}
+@media (min-width: 1200px) {
+  header div img {
+    width: 5%;
+  }
+  header div .join-text img {
+    width: 10%;
+    margin-left: -5%;
+  }
+}
+#hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 70vh;
+  width: 100%;
+}
+#hero .hero-inner {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+#hero .hero-inner .hero-text h1 span {
+  background: url(../images/img-bg.png);
+  background-position: center center;
+  background-size: cover;
+}
+#hero .hero-inner .hero-link {
+  display: grid;
+  gap: 50%;
+}
+
+#about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 70vh;
+  width: 100%;
+}
+
+.about-inner {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  gap: 5%;
+}
+
+#services .services-inner .services-inner-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 300px;
+  background-color: rgb(162, 4, 4);
+}
+
+#testimonial {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 70vh;
+  width: 100%;
+  gap: 7%;
+  margin: 0 auto;
+}
+
+.testimonial-inner {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  font-size: x-large;
+  font-weight: 200;
+  justify-content: center center;
+}
+
+.join-text img {
+  width: 20%;
+  margin-left: -5%;
+  align-items: center;
+}
+
+.join-text {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.join-text span {
+  background: #000;
+  z-index: 2;
+}
+
+/* Style for the moving line */
+.moving-line {
+  margin: 0 auto;
+  width: 4px;
+  height: 100px;
+  background: linear-gradient(to bottom, rgb(212, 255, 0), black);
+  /*Colortransitionfromwhitetoblack*/
+  transform: translate(-50%, -50%);
+  animation: moveUpDown 2s infinite ease-in-out;
+  cursor: pointer;
+}
+
+/* Moving the line up and down */
+@keyframes moveUpDown {
+  0%, 100% {
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    transform: translate(-50%, -45%);
+  }
+}
+.image-gallery {
+  display: flex;
+  overflow-x: auto;
+  /* Allows scrolling on smaller screens */
+  scroll-snap-type: x mandatory;
+  /* Ensures scrolling snaps to each image */
+}
+
+.image-container {
+  flex: 0 0 100%;
+  /* Each image takes up 100% of the viewport width on mobile */
+  scroll-snap-align: center;
+}
+.image-container img {
+  width: 100%;
+  height: auto;
+}
+
+/* Styles for larger screens (iPads, laptops, desktops) */
+@media (min-width: 768px) {
+  .image-gallery {
+    flex-wrap: wrap;
+    overflow-x: visible;
+    /* Remove scrolling for larger screens */
+  }
+  .image-container {
+    flex: 0 0 25%;
+    /* Each image takes up 25% of the container width on larger screens */
+  }
+}
+.blog-cards {
+  display: flex;
+  overflow-x: auto;
+  /* Allows scrolling on smaller screens */
+  scroll-snap-type: x mandatory;
+  /* Ensures scrolling snaps to each image */
+}
+.blog-cards div {
+  flex: 0 0 100%;
+  /* Each image takes up 100% of the viewport width on mobile */
+  scroll-snap-align: center;
+  text-align: center;
+}
+.blog-cards div img {
+  width: 60%;
+  height: auto;
+}
+
+/* Styles for larger screens (iPads, laptops, desktops) */
+@media (min-width: 768px) {
+  .blog-cards {
+    flex-wrap: wrap;
+    overflow-x: visible;
+    /* Remove scrolling for larger screens */
+  }
+  .blog-cards div {
+    flex: 0 0 20%;
+    /* Each image takes up 25% of the container width on larger screens */
+  }
+}
+.runway-inner h2 {
+  background: url(../images/img-bg.png);
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.runway-cards {
+  align-items: center;
+  justify-content: center;
+  margin-top: 5%;
+  display: flex;
+  gap: 5%;
+  margin-bottom: 5%;
+  overflow-x: auto;
+  /* Allows scrolling on smaller screens */
+  scroll-snap-type: x mandatory;
+  /* Ensures scrolling snaps to each image */
+}
+.runway-cards div {
+  gap: 10%;
+  flex: 0 0 25%;
+  /* Each image takes up 100% of the viewport width on mobile */
+  scroll-snap-align: center;
+  text-align: center;
+}
+.runway-cards div img {
+  width: 40%;
+  height: auto;
+}
+
+/* Styles for larger screens (iPads, laptops, desktops) */
+@media (min-width: 768px) {
+  .runway-inner {
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-x: visible;
+    /* Remove scrolling for larger screens */
+  }
+  .runway-inner div {
+    flex: 0 0 25%;
+    /* Each image takes up 25% of the container width on larger screens */
+  }
+}
+#newsletter {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 5%;
+  background-color: #fff;
+  background-size: contain;
+  color: #000;
+}
+#newsletter .newsletter-text h2 {
+  background: url(../images/img-bg.png);
+  background-position: center center;
+  background-size: cover;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: larger;
+  font-weight: 300;
+}
+
+.blog {
+  padding: 20px;
+  gap: 30%;
+  margin-top: 30px;
+}
+
+.footer {
+  background-image: url(../images/footer-bg.png);
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+}
+.footer .content {
+  max-width: 1200px;
+  margin: 0 auto;
+}/*# sourceMappingURL=style.css.map */
